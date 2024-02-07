@@ -1,0 +1,77 @@
+POST http://localhost:3000/servicos
+Content-Type: application/json
+
+{
+    "nome": "Algum Servico 4",
+    "descricao": "Algum Servico",
+    "preco": 1000000,
+    "imagem": "foto de imagem"
+}
+
+###
+GET http://localhost:3000/servicos
+
+###
+GET http://localhost:3000/servicos/65c3828154e371c99b4b5e4f
+
+
+###
+DELETE http://localhost:3000/servicos/65c3828154e371c99b4b5e4f
+
+###
+PUT  http://localhost:3000/servicos/65c385a78b56ba4636986c4a
+Content-Type: application/json
+
+{
+    "nome": "Teste atualização",
+    "descricao": "Algum Servico",
+    "preco": 500000,
+    "imagem": "foto de imagem"
+}
+
+###
+POST http://localhost:3000/festas
+Content-Type: application/json
+
+{
+    "titulo": "Aniversario 2",
+    "autor": "Ederney",
+    "descricao": "Aniversario da edma",
+    "orcamento": 900000,
+    "imagem": "foto da festa"
+}
+
+###
+GET http://localhost:3000/festas
+
+###
+GET http://localhost:3000/festas/65c3bcd4cd324eeb98a259a7
+
+###
+DELETE  http://localhost:3000/festas/65c3bcd4cd324eeb98a259a7
+
+###
+PUT  http://localhost:3000/festas/65c3bce9cd324eeb98a259a9
+Content-Type: application/json
+
+{
+    "titulo": "Aniversario",
+    "autor": "Ederney",
+    "descricao": "Aniversario da edma",
+    "orcamento": 900000,
+    "imagem": "foto da festa",
+    "servicos": [
+        {
+    "nome": "Algum Servico 4",
+    "descricao": "Algum Servico",
+    "preco": 1000000,
+    "imagem": "foto de imagem"
+    },
+    {
+    "nome": "Algum Servico 3",
+    "descricao": "Algum Servico",
+    "preco": 500000,
+    "imagem": "foto de imagem"
+}
+    ]
+}
